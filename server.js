@@ -9,7 +9,7 @@ import inventoryRoutes from "./routes/inventoryRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
 import path from "path";
-import {fileURLToPath} from "Url";
+import {fileURLToPath} from "url";
 
 const app = express();
 
