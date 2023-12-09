@@ -8,7 +8,8 @@ import authRoutes from "./routes/authRoutes.js";
 import inventoryRoutes from "./routes/inventoryRoutes.js";
 import analyticsRoutes from "./routes/analyticsRoutes.js";
 import adminRoutes from "./routes/adminRoutes.js";
-import path from path;
+import path from "path";
+import {fileURLToPath} from "Url";
 
 const app = express();
 
@@ -17,6 +18,10 @@ dotenv.config();
 
 //connect databases
 connectDB();
+
+//esmodule fix
+const __filename = fileURLToOath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 //middlewares
 app.use(cors()); // used to connect backend and frontend port react port is 3000 and express port is 8080
